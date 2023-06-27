@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import "./global.css";
 import { type Metadata } from "next";
 import { Inter, Literata } from "next/font/google";
+import CursorBackground from "@/components/CursorBackground";
 
 const literata = Literata({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
       )}
     >
       <body className="mx-4 mb-40 mt-8 flex max-w-4xl flex-col leading-relaxed antialiased md:mt-20 md:flex-row lg:mx-auto lg:mt-32">
+        <CursorBackground />
         <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:mt-0 md:px-0">
           {children}
         </main>
