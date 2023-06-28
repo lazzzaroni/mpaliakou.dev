@@ -1,9 +1,9 @@
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
     <>
-      <ThemeSwitcher />
+      <ThemeToggle />
       <h1 className="font-serif text-3xl font-bold tracking-tight">
         Hello from /app
       </h1>

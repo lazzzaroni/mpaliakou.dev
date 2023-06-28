@@ -1,20 +1,8 @@
 import { cn } from "@/lib/utils";
-import "./global.css";
+import "../styles/globals.css";
 import { type Metadata } from "next";
-import { Khula, Literata } from "next/font/google";
-import Providers from "./providers";
-
-const literata = Literata({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-literata",
-});
-
-const khula = Khula({
-  subsets: ["latin"],
-  weight: ["300", "400", "600"],
-  display: "swap",
-});
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { fontSans, fontSerif } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -22,24 +10,36 @@ export const metadata: Metadata = {
     template: "%s | Mikalai Paliakou",
   },
   description: "Musician and developer.",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html
-      lang="en"
-      className={cn(["scroll-smooth"], khula.className, literata.variable)}
-    >
-      <body className="mx-4 mb-40 mt-8 flex max-w-2xl flex-col bg-slate-100 font-sans leading-relaxed text-slate-950 antialiased selection:bg-purple-300 selection:text-purple-900 dark:bg-slate-950 dark:text-slate-100 md:mx-auto md:flex-row">
-        <Providers>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "mx-4 mb-40 mt-8 flex max-w-2xl flex-col scroll-smooth leading-relaxed antialiased selection:bg-purple-300 selection:text-purple-900 md:mx-auto md:flex-row",
+          fontSans.className,
+          fontSerif.variable
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
             {children}
           </main>
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
