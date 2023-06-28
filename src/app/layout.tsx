@@ -34,13 +34,13 @@ export default function RootLayout({
       lang="en"
       className={cn(["scroll-smooth"], khula.className, literata.variable)}
     >
-      <Providers>
-        <body className="mx-4 mb-40 mt-8 flex max-w-2xl flex-col bg-slate-100 font-sans leading-relaxed text-slate-950 antialiased selection:bg-purple-300 selection:text-purple-900 dark:bg-slate-950 dark:text-slate-100 md:mx-auto md:flex-row">
+      <body className="mx-4 mb-40 mt-8 flex max-w-2xl flex-col bg-slate-100 font-sans leading-relaxed text-slate-950 antialiased selection:bg-purple-300 selection:text-purple-900 dark:bg-slate-950 dark:text-slate-100 md:mx-auto md:flex-row">
+        <Providers>
           <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
             {children}
           </main>
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   );
 }
