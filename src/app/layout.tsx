@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 import "./global.css";
 import { type Metadata } from "next";
-import { Inter, Literata } from "next/font/google";
-import CursorBackground from "@/components/CursorBackground";
+import { Khula, Literata } from "next/font/google";
+import Providers from "./providers";
 
 const literata = Literata({
   subsets: ["latin"],
@@ -10,10 +10,10 @@ const literata = Literata({
   variable: "--font-literata",
 });
 
-const inter = Inter({
+const khula = Khula({
   subsets: ["latin"],
+  weight: ["300", "400", "600"],
   display: "swap",
-  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -32,18 +32,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
-        "bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-100",
-        inter.variable,
-        literata.variable
-      )}
+      className={cn(["scroll-smooth"], khula.className, literata.variable)}
     >
-      <body className="mx-4 mb-40 mt-8 flex max-w-4xl flex-col leading-relaxed antialiased md:mt-20 md:flex-row lg:mx-auto lg:mt-32">
-        <CursorBackground />
-        <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:mt-0 md:px-0">
-          {children}
-        </main>
-      </body>
+      <Providers>
+        <body className="mx-4 mb-40 mt-8 flex max-w-2xl flex-col bg-slate-100 font-sans leading-relaxed text-slate-950 antialiased selection:bg-purple-300 selection:text-purple-900 dark:bg-slate-950 dark:text-slate-100 md:mx-auto md:flex-row">
+          <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
+            {children}
+          </main>
+        </body>
+      </Providers>
     </html>
   );
 }

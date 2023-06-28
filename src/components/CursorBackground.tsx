@@ -16,7 +16,7 @@ export default function CursorBackground() {
     <div
       className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
       style={{
-        background: `radial-gradient(600px circle at ${x}px ${y}px, rgba(16, 16, 16, 0.075), transparent 70%)`,
+        background: `radial-gradient(600px at ${x}px ${y}px, rgba(16, 16, 16, 0.075), transparent 70%)`,
       }}
     ></div>
   );
