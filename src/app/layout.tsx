@@ -1,8 +1,11 @@
 import { cn } from "@/lib/utils";
+
 import "../styles/globals.css";
+
 import { type Metadata } from "next";
-import { ThemeProvider } from "@/components/ThemeProvider";
+
 import { fontSans, fontSerif } from "@/lib/fonts";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: {
