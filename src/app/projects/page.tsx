@@ -1,7 +1,12 @@
 export default function ProjectsPage() {
   return (
-    <h1 className="font-serif text-3xl font-bold tracking-tight">
-      Projects Page
-    </h1>
+    <>
+      <h1 className="scroll-m-20 font-serif text-2xl font-extrabold tracking-tight lg:text-3xl">
+        Projects Page
+      </h1>
+      <p className="text-lg leading-7 text-neutral-800 dark:text-neutral-200 [&:not(:first-child)]:mt-6">
+        Coming soon...
+      </p>
+    </>
   );
 }
