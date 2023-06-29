@@ -1,4 +1,4 @@
-# mpaliakou.dev
+# [mpaliakou.dev](https://mpaliakou.dev)
 
 My personal website built with [Nextjs](https://nextjs.org) using App Router.
 
