@@ -9,19 +9,34 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mpaliakou.dev"),
   title: {
     default: "Mikalai Paliakou",
     template: "%s | Mikalai Paliakou",
   },
-  description: "Musician and developer.",
+  description: "Frontend developer and musician.",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+  openGraph: {
+    title: "Mikalai Paliakou",
+    description: "Frontend developer and musician.",
+    url: "https://mpaliakou.dev",
+    siteName: "Mikalai Paliakou",
+    locale: "en-US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
