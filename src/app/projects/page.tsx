@@ -7,7 +7,7 @@ export default function ProjectsPage() {
         Projects Page
       </h1>
       <p className="text-lg leading-7 text-neutral-800 dark:text-neutral-200 [&:not(:first-child)]:mt-6">
-        {"Currently I'm doing challenges on "}
+        {"Currently I'm working on my skills on "}
         <CustomLink
           link="https://www.frontendmentor.io/profile/lazzzaroni"
           text="Frontend Mentor"
@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       </p>
       <p className="text-lg leading-7 text-neutral-800 dark:text-neutral-200 [&:not(:first-child)]:mt-6">
         {"Also feel free to check my "}
-        <CustomLink link="https://github.com/lazzzaroni" text="Github" />
+        <CustomLink link="https://github.com/lazzzaroni" text="GitHub" />
         {" repo."}
       </p>
     </>

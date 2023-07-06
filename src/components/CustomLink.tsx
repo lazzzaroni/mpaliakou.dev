@@ -13,7 +13,7 @@ export default function CustomLink({ link, text }: CustomLink) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex font-medium text-muted-foreground hover:text-foreground hover:underline hover:underline-offset-2"
+      className="inline-flex font-medium text-muted-foreground transition duration-0 hover:text-foreground hover:duration-200"
     >
       {text}
       <Icons.arrow className="ml-1 mt-1" />

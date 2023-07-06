@@ -50,13 +50,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "mx-4 mb-6 flex max-w-2xl flex-col scroll-smooth antialiased selection:bg-purple-300 selection:text-purple-900 md:mx-auto",
+          "mx-4 flex max-w-2xl flex-col scroll-smooth antialiased selection:bg-purple-300 selection:text-purple-900 md:mx-auto",
           fontSans.className,
           fontSerif.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="mb-24 flex h-full min-w-0 flex-auto flex-col px-2 md:px-0">
+          <div className="flex h-screen min-w-0 flex-auto flex-col px-2 md:px-0">
             <Navbar />
             <main>{children}</main>
             <Footer />

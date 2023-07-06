@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="from sticky top-0 -ml-1.5 mb-2 bg-gradient-to-b from-background from-80% py-6">
+      <header className="from sticky top-0 -ml-1.5 mb-2 bg-gradient-to-b from-background from-85% py-6">
         <nav className="flex scroll-pr-6 flex-row items-center px-0 pb-0 md:relative md:overflow-auto">
           <ThemeToggle />
           <div className="flex px-1 pt-1">
@@ -37,7 +37,7 @@ export default function Navbar() {
               return (
                 <Link key={path} href={path} className="px-1">
                   <span
-                    className={cn("hover:text-foreground", {
+                    className={cn("hover:text-foreground hover:duration-200", {
                       "text-muted-foreground": !isActive,
                     })}
                   >
