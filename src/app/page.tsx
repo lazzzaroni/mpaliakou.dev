@@ -1,3 +1,5 @@
+import CustomLink from "@/components/CustomLink";
+
 export default function Home() {
   return (
     <>
@@ -5,7 +7,8 @@ export default function Home() {
         Hi, I&apos;m Mick 👋
       </h1>
       <p className="text-lg leading-7 text-neutral-800 dark:text-neutral-200 [&:not(:first-child)]:mt-6">
-        I&apos;m a Junior Frontend Developer specializing in React development.
+        {"I'm a Junior Frontend Developer specializing in "}
+        <CustomLink link="https://react.dev/" text="React" />.
       </p>
       <p className="text-lg leading-7 text-neutral-800 dark:text-neutral-200 [&:not(:first-child)]:mt-6">
         My expertise lies in leveraging the power of React to build dynamic and
